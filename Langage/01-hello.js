@@ -4,9 +4,7 @@
  * @param {number|string} b Le 2e nombre
  * @return {number} La somme
  */
-const addition = (a, b) => {
-  return Number(a) + Number(b);
-};
+const addition = (a, b) => Number(a) + Number(b);
 
 for (let i=0; i<10; i++) {
   if (i % 2 === 0) {

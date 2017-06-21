@@ -31,11 +31,19 @@ const contact = {
 contact.nom = 'Bohdanowicz';
 console.log(typeof contact); // object
 
+const capitales = {
+  France: 'Paris',
+  Allemagne: 'Berlin',
+  Espagne: 'Madrid',
+};
+
 // 5 - Boucler sur les clés
 
 for (let prop in contact) {
   console.log(prop); // clé
-  console.log(contact[prop]); // valeur
+  if (contact.hasOwnProperty(prop)) {
+    console.log(contact[prop]); // valeur
+  }
 }
 
 // 6 - Besoin récurrent de nouveaux objet de la
@@ -56,5 +64,7 @@ console.log(typeof Voiture); // function
 console.log(typeof clio); // object
 console.log(clio._marque); // Renault
 console.log(clio.demarrer()); // Clio
-console.log(clio.demarrer === p208.demarrer); // ???
+console.log(clio.hasOwnProperty('_marque')); // true
+console.log(clio.hasOwnProperty('demarrer')); // false
+console.log(clio.demarrer === p208.demarrer); // true
 
