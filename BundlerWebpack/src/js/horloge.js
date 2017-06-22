@@ -1,6 +1,6 @@
 'use strict';
 
-import moment from 'moment';
+import { format } from 'date-fns'
 
 const delay = 1000;
 
@@ -9,7 +9,7 @@ export class Horloge {
         this._container = container;
     }
     update() {
-        this._container.innerText = moment().format('HH:mm:ss');
+        this._container.innerText = format(new Date(), 'HH:mm:ss');
     }
     start() {
         this.update();

@@ -1,0 +1,20 @@
+{
+  "devDependencies": {
+    "clean-webpack-plugin": "^0.1.16",
+    "eslint": "^4.0.0",
+    "html-webpack-plugin": "^2.28.0",
+    "nodemon": "^1.11.0",
+    "webpack": "^3.0.0",
+    "webpack-dev-server": "^2.5.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "cors": "^2.8.3",
+    "express": "^4.15.3",
+    "mongoose": "^4.10.8",
+    "morgan": "^1.8.2"
+  },
+  "scripts": {
+    "start:dev": "nodemon server"
+  }
+}
