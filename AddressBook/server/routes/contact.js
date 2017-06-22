@@ -13,6 +13,7 @@ router.post('/',
   contactCtrl.add
 );
 
+router.get('/:id', contactCtrl.show);
 router.delete('/:id', contactCtrl.delete);
 
 module.exports = router;

@@ -1,34 +1,38 @@
-const contacts = [{
-  prenom: 'John',
-  nom: 'Doe',
-  id: 123
-}, {
-  prenom: 'Jean',
-  nom: 'Dupont',
-  id: 567
-}];
+const Contact = require('../models/contact');
 
 exports.list = (req, res, next) => {
-  res.json(contacts);
+  Contact.find({}, 'prenom nom').then(contacts => {
+    res.json(contacts);
+  });
 };
 
 exports.add = (req, res, next) => {
-  const contact = req.body;
-  contact.id = contacts[contacts.length-1].id + 1;
-  contacts.push(contact);
+  const contact = new Contact(req.body);
 
-  res.statusCode = 201;
+  contact.save().then(contact => {
+    res.statusCode = 201;
+    res.json(contact);
+  });
+
+};
+
+// Ex : Contact.findByIdAndRemove
+exports.delete = (req, res, next) => {
+  const id = Number(req.params.id);
+
+  const iContact = contacts.findIndex(c => c.id === id);
+  const contact = contacts[iContact];
+
+  contacts.splice(iContact, 1);
+
   res.json(contact);
 };
 
-exports.delete = (req, res, next) => {
+// Ex : Contact.findById
+exports.show = (req, res, next) => {
   const id = Number(req.params.id);
-  // Supprimer le contact (splice, findIndex Array MDN)
-  // Au choix :
-  // - répondre en JSON le contact supprimé
-  // - répondre rien avec res.end() et status 204
-};
 
-// Créer une route
-// GET /api/contact/:id
-// Qui répond en JSON le détail du contact
+  const contact = contacts.find(c => c.id === id);
+
+  res.json(contact);
+};
