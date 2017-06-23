@@ -10,9 +10,9 @@
     <td>{{c.prenom}}</td>
     <td>{{c.nom}}</td>
     <td>
-      <a class="btn btn-xs btn-info">Afficher</a>
+      <a class="btn btn-xs btn-info" [routerLink]="['..', c._id]">Afficher</a>
       <a class="btn btn-xs btn-warning">Modifier</a>
-      <a class="btn btn-xs btn-danger" (click)="void()">Supprimer</a>
+      <a class="btn btn-xs btn-danger" (click)="supprimerContact(c)">Supprimer</a>
     </td>
   </tr>
 

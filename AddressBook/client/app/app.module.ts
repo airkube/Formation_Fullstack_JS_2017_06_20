@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { ContactsModule } from './contacts/contacts.module';
+import {RouterModule} from "@angular/router";
 
 @NgModule({
   declarations: [
@@ -11,6 +12,7 @@ import { ContactsModule } from './contacts/contacts.module';
   imports: [
     BrowserModule,
     ContactsModule,
+    RouterModule.forRoot([]),
   ],
   providers: [],
   bootstrap: [AppComponent]

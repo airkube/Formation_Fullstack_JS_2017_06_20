@@ -6,16 +6,16 @@
     </div>
 
     <ul class="nav navbar-nav">
-      <li class="active">
-        <a href="#">Lister</a>
+      <li routerLinkActive="active">
+        <a [routerLink]="['contacts/list']">Lister</a>
       </li>
-      <li>
-        <a href="#">Ajouter</a>
+      <li routerLinkActive="active">
+        <a [routerLink]="['contacts/add']">Ajouter</a>
       </li>
     </ul>
   </div><!-- /.container -->
 </nav>
 <div class="container">
-  <app-contacts-list></app-contacts-list>
+  <router-outlet></router-outlet>
 </div>
 

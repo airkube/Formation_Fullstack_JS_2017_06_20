@@ -5,6 +5,8 @@ import { ContactsRoutingModule } from './contacts-routing.module';
 import { ContactsListComponent } from './contacts-list/contacts-list.component';
 import {FormsModule} from "@angular/forms";
 import {HttpModule} from "@angular/http";
+import { ContactsShowComponent } from './contacts-show/contacts-show.component';
+import { ContactsAddComponent } from './contacts-add/contacts-add.component';
 
 @NgModule({
   imports: [
@@ -13,7 +15,7 @@ import {HttpModule} from "@angular/http";
     HttpModule,
     ContactsRoutingModule
   ],
-  declarations: [ContactsListComponent],
+  declarations: [ContactsListComponent, ContactsShowComponent, ContactsAddComponent],
   exports: [
     ContactsListComponent
   ]

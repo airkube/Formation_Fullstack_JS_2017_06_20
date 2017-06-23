@@ -21,4 +21,12 @@ export class ContactsListComponent implements OnInit {
       .subscribe(contacts => this.contacts = contacts);
   }
 
+  supprimerContact(contact: Contact) {
+    this.http.delete('/api/contacts/' + contact._id)
+      .subscribe(() => {
+        const i = this.contacts.indexOf(contact);
+        this.contacts.splice(i, 1);
+      });
+  }
+
 }

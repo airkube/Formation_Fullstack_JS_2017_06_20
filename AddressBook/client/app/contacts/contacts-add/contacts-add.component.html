@@ -1,0 +1,28 @@
+<h2>Ajouter un contact</h2>
+<form (submit)="ajouterContact()">
+  <div class="form-group">
+    <label>Prénom</label>
+    <input class="form-control"  placeholder="Prénom"
+           name="prenom"
+           [(ngModel)]="contact.prenom">
+  </div>
+  <div class="form-group">
+    <label>Nom</label>
+    <input class="form-control"  placeholder="Nom"
+           name="nom"
+           [(ngModel)]="contact.nom">
+  </div>
+  <div class="form-group">
+    <label>Email</label>
+    <input type="email" class="form-control"  placeholder="Email"
+           name="email"
+           [(ngModel)]="contact.email">
+  </div>
+  <div class="form-group">
+    <label>Téléphone</label>
+    <input type="tel" class="form-control"  placeholder="Téléphone"
+           name="telephone"
+           [(ngModel)]="contact.telephone">
+  </div>
+  <button type="submit" class="btn btn-default">Ajouter</button>
+</form>
