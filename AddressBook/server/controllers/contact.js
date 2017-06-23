@@ -16,23 +16,16 @@ exports.add = (req, res, next) => {
 
 };
 
-// Ex : Contact.findByIdAndRemove
 exports.delete = (req, res, next) => {
-  const id = Number(req.params.id);
-
-  const iContact = contacts.findIndex(c => c.id === id);
-  const contact = contacts[iContact];
-
-  contacts.splice(iContact, 1);
-
-  res.json(contact);
+  Contact.findByIdAndRemove(req.params.id)
+    .then(contact => {
+      res.json(contact);
+    });
 };
 
-// Ex : Contact.findById
 exports.show = (req, res, next) => {
-  const id = Number(req.params.id);
-
-  const contact = contacts.find(c => c.id === id);
-
-  res.json(contact);
+  Contact.findById(req.params.id)
+    .then(contact => {
+      res.json(contact);
+    });
 };
