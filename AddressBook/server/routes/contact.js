@@ -7,8 +7,8 @@ const router = new Router();
 router.get('/', contactCtrl.list);
 
 router.post('/',
- // authenticate,
- // authorize('ADMIN'),
+  // authenticate,
+  // authorize('ADMIN'),
   bodyParser.json(),
   contactCtrl.add
 );
