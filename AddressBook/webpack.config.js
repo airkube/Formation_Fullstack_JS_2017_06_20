@@ -82,7 +82,7 @@ module.exports = {
       './client/polyfills.ts'
     ],
     'styles': [
-      './client/styles.css'
+      './client/styles.scss'
     ]
   },
   'output': {
@@ -118,7 +118,7 @@ module.exports = {
       },
       {
         'exclude': [
-          path.join(process.cwd(), 'client/styles.css')
+          path.join(process.cwd(), 'client/styles.scss')
         ],
         'test': /\.css$/,
         'use': [
@@ -141,7 +141,7 @@ module.exports = {
       },
       {
         'exclude': [
-          path.join(process.cwd(), 'client/styles.css')
+          path.join(process.cwd(), 'client/styles.scss')
         ],
         'test': /\.scss$|\.sass$/,
         'use': [
@@ -172,7 +172,7 @@ module.exports = {
       },
       {
         'exclude': [
-          path.join(process.cwd(), 'client/styles.css')
+          path.join(process.cwd(), 'client/styles.scss')
         ],
         'test': /\.less$/,
         'use': [
@@ -201,7 +201,7 @@ module.exports = {
       },
       {
         'exclude': [
-          path.join(process.cwd(), 'client/styles.css')
+          path.join(process.cwd(), 'client/styles.scss')
         ],
         'test': /\.styl$/,
         'use': [
@@ -231,7 +231,7 @@ module.exports = {
       },
       {
         'include': [
-          path.join(process.cwd(), 'client/styles.css')
+          path.join(process.cwd(), 'client/styles.scss')
         ],
         'test': /\.css$/,
         'use': [
@@ -254,7 +254,7 @@ module.exports = {
       },
       {
         'include': [
-          path.join(process.cwd(), 'client/styles.css')
+          path.join(process.cwd(), 'client/styles.scss')
         ],
         'test': /\.scss$|\.sass$/,
         'use': [
@@ -285,7 +285,7 @@ module.exports = {
       },
       {
         'include': [
-          path.join(process.cwd(), 'client/styles.css')
+          path.join(process.cwd(), 'client/styles.scss')
         ],
         'test': /\.less$/,
         'use': [
@@ -314,7 +314,7 @@ module.exports = {
       },
       {
         'include': [
-          path.join(process.cwd(), 'client/styles.css')
+          path.join(process.cwd(), 'client/styles.scss')
         ],
         'test': /\.styl$/,
         'use': [

@@ -26,12 +26,20 @@ app.use('/api', cors());
 
 app.use('/api/contacts', contactRoutes);
 
-app.use('/api', (req, res) => {
+app.use('/api', (req, res, next) => {
   res.statusCode = 404;
   res.json({
     msg: 'Not Found'
   });
 });
+
+app.use('/api', (err, req, res, next) => {
+  res.statusCode = 500;
+  res.json({
+    msg: err.message
+  });
+});
+
 
 // On est en dev si pas de variable d'environnement PORT
 if (!process.env.PORT) {
